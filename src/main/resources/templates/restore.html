@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../static/css/registration.css" th:href="@{/css/registration.css}" rel="stylesheet"  />
+
+
+    <title>Change password</title>
+</head>
+<body>
+
+<div class="main">
+    <h1>Change password</h1>
+    <p>Processing request can take more than 5 days</p>
+    <form class="form" th:method="POST" th:object="${accountRestore}" th:action="@{/accountRestore/add}">
+        <input type="text" class="input" placeholder="Username" th:field="*{username}">
+        <input type="password" class="input" placeholder="Password" th:field="*{password}">
+        <input type="submit" class="submit" value="Submit">
+
+    </form>
+</div>
+
+
+</body>
+</html>

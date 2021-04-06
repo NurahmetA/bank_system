@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.css"
+            rel="stylesheet"
+    />
+
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.js"
+    ></script>
+</head>
+<body>
+
+
+<header>
+    <!-- Jumbotron -->
+    <div class="p-5 text-center bg-light">
+        <h1 class="mb-3">Card Transactions</h1>
+    </div>
+    <!-- Jumbotron -->
+</header>
+
+<div class="container">
+    <h1>Accounts</h1>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">TransactionID</th>
+            <th scope="col">CardId</th>
+            <th scope="col">Method</th>
+            <th scope="col">Currency</th>
+            <th scope="col">Money</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="transaction: ${transactions}">
+            <tr>
+                <td th:text="${transaction.transactionId}"></td>
+                <td th:text="${transaction.card.cardId}"></td>
+                <td th:text="${transaction.method}"></td>
+                <td th:text="${transaction.currency}"></td>
+                <td th:text="${transaction.money}"></td>
+
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+</body>
+</html>

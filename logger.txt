@@ -1,0 +1,12 @@
+1 USD 1000.0 1 Receive
+2 USD 1000.0 1 Send
+3 EUR 245.99999999999997 2 Receive
+4 USD 330.0 1 Send
+5 EUR 82.0 3 Receive
+6 USD 100.0 1 Send
+7 KZT 10140.0 5 Receive
+8 EUR 20.0 3 Send
+9 USD 10000.0 7 Receive
+10 USD 10000.0 7 Send
+11 KZT 83400.0 8 Receive
+12 USD 200.0 7 Send
